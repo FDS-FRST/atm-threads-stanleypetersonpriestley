@@ -26,15 +26,17 @@ public class BankAccount {
             Thread.currentThread().interrupt();
         }
         balance -= amount;
-        System.out.println(Thread.currentThread().getName() + "Mon Retrait" + amount + "Gdes");
+        System.out.println(Thread.currentThread().getName() + "Mon Retrait" + amount + "Gdes OK. Solde restant :" + balance + "Gdes");
     }else {
-        System.out.println(Thread.currentThread().getName() + "Mon Nouveau Solde" + balance);
+        System.out.println(Thread.currentThread().getName() + "Retrait echoue: Solde insuffisant" + currentBalance + "Gdes");
+    }
+    }
+    public double getBalance() {
+        System.out.println(Thread.currentThread().getName() + "Solde Actuel : " + balance + "Gdes");
+        return balance;
     }
 
-
+    public int getAcountNumber() {
+        return acountNumber;
     }
-
-
-
-
 }
