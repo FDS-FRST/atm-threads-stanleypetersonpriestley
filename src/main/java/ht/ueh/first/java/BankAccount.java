@@ -40,3 +40,13 @@ public class BankAccount {
         return acountNumber;
     }
 }
+class InvalidAccountException extends Exception {
+    public InvalidAccountException(String message) {
+        super(message);
+    }
+}
+class AccountNotFoundException extends Exception {
+    public AccountNotFoundException(String message) {
+        super(message);
+    }
+}
